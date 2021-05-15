@@ -8,7 +8,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 if isShowingMenu {
-                    SideMenuView()
+                    SideMenuView(isShowingMenu: $isShowingMenu)
                 }
                 HomeView()
                     .cornerRadius(isShowingMenu ? 20.0 : 10.0)
