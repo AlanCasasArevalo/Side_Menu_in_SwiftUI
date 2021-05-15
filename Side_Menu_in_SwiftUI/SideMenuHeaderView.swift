@@ -34,6 +34,7 @@ struct SideMenuHeaderView: View {
             Spacer()
         }
         .padding()
+        .foregroundColor(.white)
     }
 }
 
