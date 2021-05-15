@@ -16,7 +16,12 @@ struct SideMenuView: View {
                 
                 // cells
                 ForEach(SideMenuViewModel.allCases, id: \.self) { itemViewModel in
-                    SideMenuItemView(itemViewModel: itemViewModel)
+                    
+                    NavigationLink(
+                        destination: Text(itemViewModel.title),
+                        label: {
+                            SideMenuItemView(itemViewModel: itemViewModel)
+                        })
                 }
                 Spacer()
             }
