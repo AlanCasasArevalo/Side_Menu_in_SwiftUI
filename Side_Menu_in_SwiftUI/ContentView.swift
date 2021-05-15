@@ -9,8 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                Color.white
+                Text("Hola mundo")
+                    .padding()
+            }
+            .navigationBarItems(leading: Button(action: {
+                
+            }, label: {
+                Image(systemName: "list.bullet")
+                    .foregroundColor(.black)
+            }))
+            .navigationTitle("Home")
+            
+        }
     }
 }
 
