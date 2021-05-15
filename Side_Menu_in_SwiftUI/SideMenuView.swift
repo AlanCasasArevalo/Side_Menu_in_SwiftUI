@@ -9,13 +9,16 @@ struct SideMenuView: View {
             VStack {
                 // Header
                 SideMenuHeaderView()
+                    .frame(height: 240)
                 
                 // cells
-                ForEach(0..<9) { _ in
+                ForEach(0..<4) { _ in
                     SideMenuItemView()
                 }
+                Spacer()
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
