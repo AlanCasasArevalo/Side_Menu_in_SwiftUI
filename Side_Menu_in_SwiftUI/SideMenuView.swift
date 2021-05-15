@@ -15,8 +15,8 @@ struct SideMenuView: View {
                     .frame(height: 240)
                 
                 // cells
-                ForEach(0..<4) { _ in
-                    SideMenuItemView()
+                ForEach(SideMenuViewModel.allCases, id: \.self) { itemViewModel in
+                    SideMenuItemView(itemViewModel: itemViewModel)
                 }
                 Spacer()
             }
